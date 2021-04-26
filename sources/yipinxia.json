@@ -1,0 +1,35 @@
+{
+    "name": "一品侠",
+    "url": "www.yipinxia.net",
+    "version": 103,
+    "search": {
+        "url": "http://www.yipinxia.net/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": ".grid > tbody >tr:gt(1)",
+        "name": "td:first-child > a",
+        "author":"td:nth-child(3)",
+        "cover":"",
+        "detail": "td:first-child > a"
+    },
+    "detail": {
+        "name":".info > h2 >a",
+        "author":".info > .intr@match->(.?作者：)(<a.+)",
+        "cover":"a.img > img",
+        "summary":".con",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "catalog":"a.readnow"
+    },
+    "catalog": {
+        "list": ".list > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#booktext",
+        "purify": [
+            "[一品侠yi.+et]",
+            "本书由飞卢.+提供",
+            "(ne?"
+        ]
+    }
+}

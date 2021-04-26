@@ -1,0 +1,36 @@
+{
+    "name": "西红柿小说",
+    "url": "www.fqxs.org",
+    "version": 101,
+    "search": {
+        "url": "http://www.fqxs.org/modules/article/search.php@post->keyword=${key}",
+        "charset": "utf-8",
+        "list": ".novelslist2 > ul > li:gt(1)",
+        "name": ".s2",
+        "author":".s4",
+        "detail": ".s2 > a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[name=description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "#list >dl >dt~dt~dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content > p",
+        "purify": [
+            "推荐下，.+！",
+            "广个告，.+！",
+            "插一句，.+！"
+        ]
+    }
+}

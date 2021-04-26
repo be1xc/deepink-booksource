@@ -1,0 +1,33 @@
+{
+    "name": "铅笔小说",
+    "url": "www.x23qb.com",
+    "version": 104,
+    "search": {
+        "url": "https://www.x23qb.com/search2.php@post->searchkey=${key}&searchtype=all",
+        "list": "#nr",
+        "charset":"gb2312",
+        "name": "h3 > a",
+        "cover": "img",
+        "detail": "h3 > a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "#chapterList > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {    
+        "content": "#TextContent>p",
+        "purify":["铅笔小说","（继续下一页）","！！禁止转码、禁止阅读模式，部分内容隐藏，请退出浏览器阅读模式！","\\[.+?\\..+?\\..+?\\]","部分内容隐藏.+阅读模式"],
+        "page":".mlfy_page > a:nth-child(5)@match->(.+_..html)"
+    }
+}

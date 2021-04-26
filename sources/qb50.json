@@ -1,0 +1,33 @@
+{
+    "name": "全本小说",
+    "url": "www.qb50.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.qb50.com/modules/article/search.php?searchkey=${key}&submit=%CB%D1%CB%F7",
+        "charset": "gbk",
+        "list": "tbody > tr:gt(1)",
+        "name": ".odd:first-child",
+        "author":".odd:first-child+td+td",
+        "cover":"",
+        "detail": ".odd:first-child>a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": ".zjlist > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify":["全本小说网.+最新章节！"]
+    }
+}

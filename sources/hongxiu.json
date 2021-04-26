@@ -1,0 +1,36 @@
+{
+    "name": "红袖",
+    "url": "www.hongxiu.com",
+    "version": 102,
+    "search": {
+        "url": "https://www.hongxiu.com/so/${key}",
+        "charset": "utf-8",
+        "list": "#result-list > div > ul > li",
+        "cover":".book-img-box > img",
+        "name": ".book-mid-info > h4",
+        "author":".author > a:nth-child(2)",
+        "detail": ".book-mid-info > h4 >a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": ".volume-wrap >.volume",
+        "booklet":{
+            "name":"h3",
+            "list":".cf > li"
+        },
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": ".ywskythunderfont > p"
+    }
+}

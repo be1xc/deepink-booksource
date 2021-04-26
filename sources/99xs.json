@@ -1,0 +1,37 @@
+{
+    "name": "99小说网",
+    "url": "www.99xs.net",
+    "version": 106,
+    "search": {
+        "url": "https://www.99xs.net/search/@post->searchkey=${key}&Submit=%E6%90%9C%E7%B4%A2",
+        "charset": "utf-8",
+        "list": ".txt-list.txt-list-row5 > li:gt(1)",
+        "name": ".s2",
+        "author":".s4",
+        "cover":"",
+        "detail": ".s2 >a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[name=description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "div ~ div > ul > li",
+        "name": "a",
+        "chapter": "a",
+        "page":"a:matches(下一页)"
+    },
+    "chapter": {
+        "content": "#content>p",
+        "page": "#next_url",
+        "purify": [
+            "您阅读的小说来自：久久小说网，网址：www.99xs.net"
+        ]
+    }
+}

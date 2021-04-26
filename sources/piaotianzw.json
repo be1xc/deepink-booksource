@@ -1,0 +1,35 @@
+{
+    "name": "飘天文学",
+    "url": "www.piaotianzw.co",
+    "version": 104,
+    "search": {
+        "url": "https://www.piaotianzw.com/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": ".novelslistss > li",
+        "name": ".s2",
+        "author":".s4",
+        "cover":"",
+        "detail": ".s2 >a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "#list > dl >.clear ~ dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "飘天中文网.+最新章节！"
+        ]
+    }
+}

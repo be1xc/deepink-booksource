@@ -1,0 +1,33 @@
+{
+    "name": "奇奇小说",
+    "url": "www.477zw.com",
+    "version": 102,
+    "search": {
+        "url": "https://www.477zw.com/search.php?keyword=${key}",
+        "charset": "utf-8",
+        "list": ".result-item.result-game-item",
+        "name": ".result-item-title",
+        "author":".result-game-item-info > p:first-child > span~span",
+        "cover":".result-game-item-pic-link > img",
+        "detail": ".result-item-title > a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[name=description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify":["奇奇小说.+com","：。： ","更新最快.+om","奇奇小説.+com"]
+    }
+}

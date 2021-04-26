@@ -1,0 +1,40 @@
+{
+    "name": "4020",
+    "url": "www.wsskw.com",
+    "version": 104,
+    "search": {
+        "url": "http://www.wsskw.com/so.html?q=${key}",
+        "charset": "utf-8",
+        "list": ".grid> tbody >tr:gt(0)",
+        "name": ".even:nth-child(2)",
+        "author":".even:nth-child(4)",
+        "detail": ".even:nth-child(2)>a"
+    },
+    "detail": {
+        "name":".detail_info > div:nth:child(2) > h1",
+        "author":"li.small:nth-child(1) > a:nth-child(1)",
+        "cover":".detail_info > div:first-child > div > img",
+        "summary":"li.small:nth-child(5)",
+        "status":"",
+        "update":"li.small:nth-child(3)",
+        "lastChapter":"li.small:nth-child(4) > a:nth-child(1)",
+        "catalog":""
+    },
+    "catalog": {
+        "list": ".showBox.mt20 ~ .showBox.mt20 > .showInfo > ul > li",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "请记住本书.+(om。)[提供下载]",
+            "最新网址.+com",
+            "小说排行.+aspx",
+            "最新更新.+aspx",
+            "最新网址.+提供下载",
+            "请记住本书首发.+com",
+            "4020小说.+com"
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "name": "落秋中文",
+    "url": "www.lqbook.com",
+    "version": 101,
+    "search": {
+        "url": "https://www.lqbook.com/modules/article/search.php?searchkey=${key}&submit=搜索",
+        "charset": "gbk",
+        "list": ".grid > tbody > tr:gt(1)",
+        "name": ".odd:first-child",
+        "author":".odd:nth-child(3)",
+        "detail": ".odd:first-child > a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[name=description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": ".zjlist > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify": [
+            "落秋中文网.+最新章节！"
+        ]
+    }
+}

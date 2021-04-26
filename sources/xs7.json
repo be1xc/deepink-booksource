@@ -1,0 +1,33 @@
+{
+    "name": "小说旗",
+    "url": "www.xs7.co",
+    "version": 101,
+    "search": {
+        "url": "https://www.xs7.co/modules/article/search.php?searchkey=${key}",
+        "charset": "gbk",
+        "list": "tbody > tr:gt(1)",
+        "name": ".odd:first-child",
+        "author":".odd:nth-child(3)",
+        "cover":"",
+        "detail": ".odd:first-child > a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": ".zjbox > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "purify":["小说旗.+最新章节！"]
+    }
+}

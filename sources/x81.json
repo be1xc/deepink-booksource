@@ -1,0 +1,32 @@
+{
+    "name": "新八一中文网",
+    "url": "www.x81zw.com",
+    "version": 103,
+    "search": {
+        "url": "https://www.x81zw.com/search.php?keyword=${key}",
+        "charset": "utf-8",
+        "list": "div.result-list > .result-item",
+        "name": "a.result-game-item-title-link",
+        "author": "p.result-game-item-info-tag > span:nth-child(2)",
+        "cover": ".result-game-item-pic > a.result-game-item-pic-link > img",
+        "detail": "a.result-game-item-title-link"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[property=og:description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "div#list > dl > dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {    
+        "content": "#content"
+    }
+}

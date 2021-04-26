@@ -1,2 +1,20 @@
-# bs
-1f7af72ad6912d306b5053abf90c7ebba0a0d23ef30287f01f5178050a998d5232e020372358e3227efd40e1178b0561ff0ccccf4f1bc9098b25e925cfa04b3f
+# BookSources
+
+#### deepink Booksource
+- [81中文](https://81zw.com)
+- [新81中文](https://x81zw.com)
+- [天天书吧](https://ttshu8.org)
+- [9天小说](https://9txs.com)
+- [铅笔小说](https://x23qb.com)
+- [看书君](https://kanshujun.cc)
+- [全本小说](https://qb50.com)
+- [奇奇小说](https://477zw.com)
+- [小说旗](https://xs7.co)
+- [飘天文学](https://piaotianzw.co)
+- [一品侠](https://yipinxia.net)
+- [落秋中文](https://lqbook.com)
+- [西红柿小说](https://fqxs.org)
+- [天籁小说](https://23txt.com)
+- [4020电子书](https://4020.com)
+- [99小说](https://99xs.net)
+- [蚂蚁文学](https://imayitxt.com)

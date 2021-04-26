@@ -1,0 +1,33 @@
+{
+    "name": "看书君",
+    "url": "m.kanshujun.cc",
+    "version": 105,
+    "search": {
+        "url": "http://m.kanshujun.cc/s.php@post->type=articlename&s=${key}&submit=%CB%D1%CB%F7",
+        "list": ".line",
+        "charset":"gbk",
+        "name": ".blue",
+        "author": "p > a:nth-child(3)",
+        "detail": ".blue"
+    },
+    "detail": {
+        "name":".detailTitle > b",
+        "author":".detailTitle + p > span",
+        "cover":".bookImg > img",
+        "summary":".intro > p:nth-child(2)",
+        "status":".detailTitle > span",
+        "update":".detailChapter > p",
+        "lastChapter":".detailChapter > h4",
+        "catalog":".readBn"
+    },
+    "catalog": {
+        "list": ".chapterList>ul > li",
+        "name": "a",
+        "chapter": "a",
+        "page":".right >a"
+    },
+    "chapter": {    
+        "content": ".readerCon",
+        "purify":["〔?♂書♂君-最新网址：m.kanshujun.cc♂〕","〔?","一秒♂记住♂看♂书♂君♂手机用户输入地址：m.♂kan♂shu♂jun♂.com"]
+    }
+}

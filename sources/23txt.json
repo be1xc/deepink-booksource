@@ -1,0 +1,31 @@
+{
+    "name": "天籁小说",
+    "url": "www.233txt.org",
+    "version": 102,
+    "search": {
+        "url": "https://www.233txt.com/search.php?q=${key}",
+        "charset": "utf-8",
+        "list": ".result-list > div",
+        "name": ".result-game-item-detail > h3",
+        "author":".result-game-item-info > p:first-child > span + span",
+        "detail": ".result-game-item-detail > h3 >a"
+    },
+    "detail": {
+        "name":"meta[property=og:novel:book_name]@attr->content",
+        "author":"meta[property=og:novel:author]@attr->content",
+        "cover":"meta[property=og:image]@attr->content",
+        "summary":"meta[name=description]@attr->content",
+        "status":"meta[property=og:novel:status]@attr->content",
+        "update":"meta[property=og:novel:update_time]@attr->content",
+        "lastChapter":"meta[property=og:novel:lastest_chapter_name]@attr->content",
+        "catalog":""
+    },
+    "catalog": {
+        "list": "#list >dl >dd",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content"
+    }
+}

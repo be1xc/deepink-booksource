@@ -1,0 +1,30 @@
+{
+    "name": "天天书吧",
+    "url": "m.ttshu8.org",
+    "version": 101,
+    "search": {
+        "url": "http://m.ttshu8.org/so.html@post->keyword=${key}&t=1",
+        "list": ".hot_sale",
+        "name": "a >p",
+        "detail": "a"
+    },
+    "detail": {
+        "name":".title",
+        "author":".synopsisArea_detail > p:nth-child(2)",
+        "cover":".synopsisArea_detail > img:nth-child(1)",
+        "summary":".review",
+        "status":".synopsisArea_detail > p:nth-child(4)",
+        "update":".synopsisArea_detail > p:nth-child(6)",
+        "lastChapter":"meta[property=og:novel:latest_chapter_name]@attr->content",
+        "catalog":".recommend > h2:nth-child(3) > a:nth-child(1)"
+    },
+    "catalog": {
+        "list": "#chapterlist>p",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {    
+        "content": "#chaptercontent>p",
+        "purify":["一秒记住【】，无弹窗，更新快，免费阅读！","『加入书签，方便阅读』"]
+    }
+}
